@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <h1>Validación Tarjeta</h1>
+<body>
+ <main>
+    <div>
+       <label for="nroTarjeta">Nro Tarjeta:</label>
+       <input type="text" id="nroTarjeta" maxlength="16" minlength="13">
+       <div>
+         <button type="submit" id="btnValidar"> Validar</button>
+       </div>
+    </div>
+    <div>
+         <p id="valor"></p>
+         <p id="maskify"></p>
+    </div>
+
+  <header></header>
+  </main>
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+
+</body>
+
 </html>
