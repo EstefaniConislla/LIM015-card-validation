@@ -14,7 +14,7 @@ function val() {
   const validador = validator.isValid(nroTarjeta);
   const mascara = validator.maskify(nroTarjeta);
   const franquicia = validator.franquicia(nroTarjeta);
-  console.log(franquicia);
+  //console.log(franquicia);
   document.getElementById('valor').innerHTML = validador ? 'Tu tarjeta es valida' : 'Tu tarjeta no es valida';
   document.getElementById('maskify').innerHTML = mascara;
 }
