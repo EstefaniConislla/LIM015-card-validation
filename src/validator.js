@@ -35,19 +35,42 @@ const validator = {
     // console.log("Tu tarjeta no es valida");
   },
 
-  maskify:function(cardNumber){
+  maskify: function (cardNumber) {
     // eslint-disable-next-line no-console
-        return cardNumber.split('').map((letter, idx) => idx < cardNumber.length - 4 ? '#' : letter).join('');
-  },    
-  
-  franquicia:function(cardNumber) {
-    if (cardNumber[0]==4) {
+    return cardNumber
+      .split("")
+      .map((letter, idx) => (idx < cardNumber.length - 4 ? "#" : letter))
+      .join("");
+  },
+
+  getIssuer: function (cardNumber) {
+    if (cardNumber[0] == 4 && cardNumber.length == 16) {
+      return "Visa";
+    } else if (
+      50 < parseInt(cardNumber.substring(0, 2)) &&
+      parseInt(cardNumber.substring(0, 2)) < 56) {
+      return "Mastercard";
+    } else if (33 < parseInt(cardNumber.substring(0,2)) && parseInt(cardNumber.substring(0,2)) < 38) {
+      return "American Express";
+    }
+  },
+
+  /*americanexpress:function (cardNumber) {34 y 37
+    if (cardNumber[0]==37) {
+      return "AmericanExpress";
+    }
+  }*/
+  /*franquicia: function(cardNumber) {
+    if(cardNumber(0)==4){
       return "Visa";
     }
-
-  
-}
+    if(cardNumber.substr(0,2) >= "51" && cardNumber.substr(0,2) <= "55")
+    return "Mastercard";
+    } else if(cardNumber,charAt(0) == "3") {
+      if (cardNumber.charAt(1) == "4" || cardNumber.charAt(1) == "7") {
+        return "Amex";
+      }
+    }*/
 };
-
 
 export default validator;

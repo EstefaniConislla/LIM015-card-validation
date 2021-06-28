@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Tarjeta de crédito válida</title>
@@ -8,19 +7,18 @@
 </head>
   <h1>Validación Tarjeta</h1>
 <body>
- <main>
+  <section>
+    <label for="nroTarjeta">Nro Tarjeta:</label>
+    <input type="text" id="nroTarjeta" maxlength="16" minlength="13">
     <div>
-       <label for="nroTarjeta">Nro Tarjeta:</label>
-       <input type="text" id="nroTarjeta" maxlength="16" minlength="13">
-       <div>
-         <button type="submit" id="btnValidar"> Validar</button>
-       </div>
+    <button type="submit" id="btnValidar"> Validar</button>
     </div>
-    <div>
-         <p id="valor"></p>
-         <p id="maskify"></p>
-    </div>
-
+  </section>
+    <section>
+      <p id="valor"></p>
+      <p id="franquicia"></p>
+      <p id="maskify"></p>
+    </section>
   <header></header>
   </main>
   <footer></footer>

@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import validator from './validator.js';
+import validator from "./validator.js";
 
 // console.log(validator);
 
@@ -10,15 +10,24 @@ function numeros(e) {
 }
 
 function val() {
-  const nroTarjeta = document.getElementById('nroTarjeta').value;
+  const nroTarjeta = document.getElementById("nroTarjeta").value;
   const validador = validator.isValid(nroTarjeta);
   const mascara = validator.maskify(nroTarjeta);
-  const franquicia = validator.franquicia(nroTarjeta);
-  //console.log(franquicia);
-  document.getElementById('valor').innerHTML = validador ? 'Tu tarjeta es valida' : 'Tu tarjeta no es valida';
-  document.getElementById('maskify').innerHTML = mascara;
+  const franquicia = validator.getIssuer(nroTarjeta);
+  if (nroTarjeta.length == 0) {
+    alert("Debes ingresar tu número de tarjeta");
+  } else {
+    document.getElementById("franquicia").innerHTML = franquicia;
+    document.getElementById("valor").innerHTML = validador
+      ? "Tu tarjeta es valida"
+      : "Tu tarjeta no es valida";
+    document.getElementById("maskify").innerHTML = mascara;
+  }
 }
 
-
-document.getElementById('nroTarjeta').addEventListener('keypress', (e) => { numeros(e); });
-document.getElementById('btnValidar').addEventListener('click', () => { val() });
+document.getElementById("nroTarjeta").addEventListener("keypress", (e) => {
+  numeros(e);
+});
+document.getElementById("btnValidar").addEventListener("click", () => {
+  val();
+});
