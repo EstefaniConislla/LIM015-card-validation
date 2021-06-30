@@ -42,6 +42,18 @@ const validator = {
       .map((letter, idx) => (idx < cardNumber.length - 4 ? "#" : letter))
       .join("");
   },
+  /*maskify: function(cardNumber){
+    const number = [];
+    for (let i=0; i< cardNumber.length; i++){
+      if(i<cardNumber.length-4){
+        number.push("*");
+      }
+      else{
+        number.push(cardNumber[i])
+      }
+    }
+    return number.join("");
+  }, */
 
   getIssuer: function (cardNumber) {
     if (cardNumber[0] == 4 && cardNumber.length == 16) {

@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.fondo{
+    background: url('image/machup.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.texto{
+    width: 100%;
+    height: 50px;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 8px;
+    font-family: sans-serif;
+}
+.contenedor{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: cornsilk;
+    text-align: center;
+    font-family: sans-serif;
+}
+.result{
+    background-color: beige;
+    text-align: center;
+    line-height: 200%;
+    font-family: 'love';
+    border-radius: 10px;
+    position: 0 2em;
+    top: 300px;
+    right: 300px;
+}
+#btnValidar{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 1px solid;
+    width: 25%;
+    height: 20px;
+}

@@ -5,25 +5,24 @@
   <title>Tarjeta de crédito válida</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <h1>Validación Tarjeta</h1>
-<body>
-  <section>
-    <label for="nroTarjeta">Nro Tarjeta:</label>
-    <input type="text" id="nroTarjeta" maxlength="16" minlength="13">
-    <div>
-    <button type="submit" id="btnValidar"> Validar</button>
-    </div>
-  </section>
-    <section>
+  <h1 class="texto">Validación Tarjeta</h1>
+<body class="fondo">
+  <main>
+    <section class="contenedor">
+      <label for="nroTarjeta">Nro Tarjeta:</label>
+      <input type="text" id="nroTarjeta" maxlength="16" minlength="13">
+      <div>
+      <button type="submit" id="btnValidar"> Validar</button>
+      </div>
+    </section>
+    <section class="result">
       <p id="valor"></p>
       <p id="franquicia"></p>
       <p id="maskify"></p>
     </section>
-  <header></header>
   </main>
-  <footer></footer>
-  <script src="index.js" type="module"></script>
-
+    <footer></footer>
+   <script src="index.js" type="module"></script>
 </body>
 
 </html>
